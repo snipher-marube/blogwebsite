@@ -1,0 +1,125 @@
+{% extends 'base.html' %} {% block title %}Home{% endblock %} {% load static %}
+{% block content %}
+<section class="relative sm:mx-12 mx-2">
+  <div class="relative shadow-none bg-primary sm:flex block">
+    <div class="relative overflow-hidden sm:w-3/4 mt-3 sm:mr-2 sm:mx-10">
+      <h5 class="mb-3 text-xl font-bold text-start text-wrap text-dark mt-4">
+        Latest News
+      </h5>
+
+      <div class="relative w-full">
+        <!-- Slides -->
+        <div class="overflow-hidden">
+          <ul
+            class="relative w-full overflow-hidden p-0 whitespace-no-wrap block"
+          >
+            <li class="mt-6">
+              <img
+                src="{% static 'images/p1.png' %}"
+                class="w-full max-w-full h-[150px] m-auto object-cover"
+              />
+
+              <a
+                href="#"
+                class="text-start text-xl text-secondary mb-2 text-wrap font-bold hover:underline"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </a>
+              <p
+                class="text-thin text-sm text-start text-wrap text-gray font-Roboto"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                est dolore ut impedit, sunt tempora animi autem sequi, nisi ab
+                quo dolores iure modi, qui molestias. Ipsa accusamus et ut.
+              </p>
+              <a
+                href="#"
+                class="text-start text-md text-blue-600 mb-2 text-wrap font-bold hover:underline"
+              >
+                learm More
+              </a>
+            </li>
+            <li class="mt-6">
+              <img
+                src="{% static 'images/p1.png' %}"
+                class="w-full max-w-full h-[150px] m-auto object-cover"
+              />
+
+              <a
+                href="#"
+                class="text-start text-xl text-secondary mb-2 text-wrap font-bold hover:underline"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </a>
+              <p
+                class="text-thin text-sm text-start text-wrap text-gray font-Roboto"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                est dolore ut impedit, sunt tempora animi autem sequi, nisi ab
+                quo dolores iure modi, qui molestias. Ipsa accusamus et ut.
+              </p>
+              <a
+                href="#"
+                class="text-start text-md text-blue-600 mb-2 text-wrap font-bold hover:underline"
+              >
+                learm More
+              </a>
+            </li>
+            <li class="mt-6">
+              <img
+                src="{% static 'images/p1.png' %}"
+                class="w-full max-w-full h-[150px] m-auto object-cover"
+              />
+
+              <a
+                href="#"
+                class="text-start text-xl text-secondary mb-2 text-wrap font-bold hover:underline"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </a>
+              <p
+                class="text-thin text-sm text-start text-wrap text-gray font-Roboto"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                est dolore ut impedit, sunt tempora animi autem sequi, nisi ab
+                quo dolores iure modi, qui molestias. Ipsa accusamus et ut.
+              </p>
+              <a
+                href="#"
+                class="text-start text-md text-blue-600 mb-2 text-wrap font-bold hover:underline"
+              >
+                learm More
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Controls -->
+      </div>
+    </div>
+
+    <div class="sm:w-1/4 block sm:mr-6 sm:mx-10">
+      <h5 class="mb-3 text-xl font-bold text-start text-wrap text-dark mt-4">
+        Categories
+      </h5>
+
+      <div class="mb-2 lg:mb-0 mt-6">
+        <a href="#" class="hover:underline">
+          <h5 class="mb-3 text-lg font-bold text-start text-wrap text-dark">
+            Django
+          </h5>
+        </a>
+        <a href="#" class="hover:underline">
+          <h5 class="mb-3 text-lg font-bold text-start text-wrap text-dark">
+            Java
+          </h5>
+          <a href="#" class="hover:underline">
+          <h5 class="mb-3 text-lg font-bold text-start text-wrap text-dark">
+            HTML
+          </h5>
+        </a>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
