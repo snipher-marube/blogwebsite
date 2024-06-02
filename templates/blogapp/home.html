@@ -1,10 +1,13 @@
 {% extends 'base.html' %} {% block title %}Home{% endblock %} {% load static %}
 {% block content %}
-<form class="mt-10 sticky top-1 z-50 mx-auto max-w-xl py-2 px-6 rounded-full bg-gray-50 border flex focus-within:border-gray-300">
+<div class="sticky top-0 z-50 w-full bg-white">
+  <form class="mt-10  mx-auto max-w-xl py-2 px-6 rounded-full bg-gray-50 border flex focus-within:border-gray-300">
     <input type="text" placeholder="Search anything" class="bg-transparent w-full focus:outline-none pr-4 font-semibold border-0 focus:ring-0 px-0 py-0" name="topic"><button class="flex flex-row items-center justify-center min-w-[130px] px-4 rounded-full font-medium tracking-wide border disabled:cursor-not-allowed disabled:opacity-50 transition ease-in-out duration-150 text-base bg-black text-white font-medium tracking-wide border-transparent py-1.5 h-[38px] -mr-3" >
         Search
     </button>
 </form>
+</div>
+
 
 <section class="relative sm:mx-12 mx-2">
   <div class="relative shadow-none bg-primary sm:flex block">
@@ -17,8 +20,60 @@
         <!-- Slides -->
         <div class="overflow-hidden">
           <ul
-            class="relative w-full overflow-hidden p-0 whitespace-no-wrap block"
+            class="relative w-full overflow-hidden p-0 whitespace-no-wrap grid sm:grid-cols-3 gap-2"
           >
+            <li class="mt-6">
+              <img
+                src="{% static 'images/p1.png' %}"
+                class="w-full max-w-full h-[150px] m-auto object-cover"
+              />
+
+              <a
+                href="#"
+                class="text-start text-xl text-secondary mb-2 text-wrap font-bold hover:underline"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </a>
+              <p
+                class="text-thin text-sm text-start text-wrap text-gray font-Roboto"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                est dolore ut impedit, sunt tempora animi autem sequi, nisi ab
+                quo dolores iure modi, qui molestias. Ipsa accusamus et ut.
+              </p>
+              <a
+                href="#"
+                class="text-start text-md text-blue-600 mb-2 text-wrap font-bold hover:underline"
+              >
+                learn More
+              </a>
+            </li>
+            <li class="mt-6">
+              <img
+                src="{% static 'images/p1.png' %}"
+                class="w-full max-w-full h-[150px] m-auto object-cover"
+              />
+
+              <a
+                href="#"
+                class="text-start text-xl text-secondary mb-2 text-wrap font-bold hover:underline"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </a>
+              <p
+                class="text-thin text-sm text-start text-wrap text-gray font-Roboto"
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                est dolore ut impedit, sunt tempora animi autem sequi, nisi ab
+                quo dolores iure modi, qui molestias. Ipsa accusamus et ut.
+              </p>
+              <a
+                href="#"
+                class="text-start text-md text-blue-600 mb-2 text-wrap font-bold hover:underline"
+              >
+                learn More
+              </a>
+            </li>
             <li class="mt-6">
               <img
                 src="{% static 'images/p1.png' %}"
