@@ -562,6 +562,18 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
 .m-auto {
   margin: auto;
 }
