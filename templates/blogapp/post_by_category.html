@@ -1,0 +1,171 @@
+{% extends 'base.html' %} {% block title %} Django {% endblock %}
+{% load static %} {% block content %}
+<!--hero section-->
+<section
+  class="relative h-[300px] flex flex-col items-start justify-start text-start text-white py-0 px-3"
+>
+  <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+    <img
+      src="https://i.pinimg.com/236x/97/80/03/97800332a04d165fb04b6a9658604653.jpg"
+      class="w-full h-[400px] object-cover"
+      alt="{{research.title}}"
+    />
+  </div>
+
+  <nav
+    aria-label="Breadcrumb"
+    class="absolute items-start justify-start bottom-0 z-10 w-full mb-4"
+  >
+    <ol
+      class="breadcrumb flex items-stretch gap-2 px-4 list-none rounded-none shadow-none h-8 bg-secondary bg-opacity-50 text-dark font-Roboto font-semibold text-thin text-sm transition-colors hover:text-gray"
+    >
+      <li class="items-center flex gap-2 md:flex">
+        <a
+          href="{% url 'home' %}"
+          class="flex max-w-[20ch] items-start gap-1 text-gray truncate whitespace-nowrap font-Roboto font-semibold text-thin transition-colors hover:text-gray"
+          >Home</a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="flex-none w-4 h-4 transition-transform stroke-slate-700 md:rotate-180 text-dark"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+          aria-labelledby="title-01 description-01"
+          role="graphics-symbol"
+        >
+          <title id="title-01">Arrow</title>
+          <desc id="description-01">
+            Arrow icon that points to the next page in big screen resolution
+            sizes and previous page in small screen resolution sizes.
+          </desc>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </li>
+      <li class="items-center flex gap-2 md:flex">
+        <a
+          href="#"
+          class="flex max-w-[20ch] items-start gap-1 text-gray truncate whitespace-nowrap font-Roboto font-semibold text-thin transition-colors hover:text-gray"
+          >Posts</a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="flex-none w-4 h-4 transition-transform stroke-slate-700 md:rotate-180 text-dark"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+          aria-labelledby="title-01 description-01"
+          role="graphics-symbol"
+        >
+          <title id="title-01">Arrow</title>
+          <desc id="description-01">
+            Arrow icon that points to the next page in big screen resolution
+            sizes and previous page in small screen resolution sizes.
+          </desc>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </li>
+
+      <li class="items-center hidden gap-2 md:flex">
+        <p
+          class="flex max-w-[20ch] items-center gap-1 text-dark truncate whitespace-nowrap font-Roboto font-semibold text-thin transition-colors hover:text-gray"
+        >
+          Django
+        </p>
+      </li>
+    </ol>
+  </nav>
+</section>
+
+<section
+  class="bg-gray-100  lg:py-12 lg:flex lg:justify-center"
+>
+<div class="items-center block mt-6">
+    
+    <a href="#" 
+        class="flex max-w-[20ch] items-center gap-1 text-dark truncate whitespace-nowrap font-Roboto mt-2 text-thin transition-colors hover:text-gray hover:underline"
+    >
+    <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="flex-none w-4 h-4 transition-transform stroke-slate-700 md:rotate-180 text-dark"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+          aria-labelledby="title-01 description-01"
+          role="graphics-symbol"
+        >
+          <title id="title-01">Arrow</title>
+          <desc id="description-01">
+            Arrow icon that points to the next page in big screen resolution
+            sizes and previous page in small screen resolution sizes.
+          </desc>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        Django
+    </a>
+    
+</div>
+  <div class="w-3/4">
+   
+    <div
+      class="overflow-hidden my-4 bg-white  lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-none lg:rounded-xl"
+    >
+      <div class="lg:w-1/2">
+        <div
+          class="h-64 bg-cover lg:h-full"
+          style="
+            background-image: url('https://i.pinimg.com/236x/97/80/03/97800332a04d165fb04b6a9658604653.jpg');
+          "
+        ></div>
+      </div>
+
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h2 class="text-md font-semibold text-dark dark:text-dark md:text-md">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, ipsa!
+        </h2>
+
+        <p class="mt-4 text-gray dark:text-gray text-sm text-thin">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, repellat neque. Laborum dolore corrupti odio. Aliquam, vel sequi! Id, iste.
+        </p>
+
+        <div class="inline-flex w-full mt-6 sm:w-auto">
+          <a
+            href="{% url 'detail' %}"  
+            class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-blue-500 rounded-none hover:bg-blue-400"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="text-center">
+      <p class="text-gray-500 dark:text-gray-400">
+        No research found in this category
+      </p>
+    </div>
+    -->
+    
+    
+  </div>
+</section>
+
+{% endblock %}
