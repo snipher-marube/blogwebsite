@@ -1,0 +1,22 @@
+<svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="flex-none w-4 h-4 transition-transform stroke-slate-700 md:rotate-180 text-dark"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+          aria-labelledby="title-01 description-01"
+          role="graphics-symbol"
+        >
+          <title id="title-01">Arrow</title>
+          <desc id="description-01">
+            Arrow icon that points to the next page in big screen resolution
+            sizes and previous page in small screen resolution sizes.
+          </desc>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
