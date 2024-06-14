@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blogapp'
+    'blogapp',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,21 @@ MEDIA_ROOT = BASE_DIR / 'static/media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '99%',
+        'tabSpaces': 4,
+        
+    }
+}
+
+CKEDITOR_IMAGE_BACKEND = 'ckeditor_uploader.backends.PillowBackend'
+CKEDITOR_FORCE_JPEG_COMPRESSION = True
+CKEDITOR_IMAGE_QUALITY = 90
