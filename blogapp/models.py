@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 from ckeditor_uploader.fields import RichTextUploadingField
 
 class Category(models.Model):
@@ -44,3 +45,6 @@ class Post(models.Model):
 
     def __str__(self) -> str:
         return self.title
+    
+    def get_absolute_url(self):
+       return reverse('detail', args=[self.category.slug, self.slug, self.publish.year, self.publish.month, self.publish.day])
