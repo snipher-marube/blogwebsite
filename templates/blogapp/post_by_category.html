@@ -14,7 +14,7 @@
 
   <nav
     aria-label="Breadcrumb"
-    class="absolute items-start justify-start bottom-0 z-10 w-full mb-4"
+    class="absolute items-start justify-start bottom-0 z-10 w-full mb-0 bg-black"
   >
     <ol
       class="breadcrumb flex items-stretch gap-2 px-4 list-none rounded-none shadow-none h-8 bg-secondary bg-opacity-50 text-dark font-Roboto font-semibold text-thin text-sm transition-colors hover:text-gray"
@@ -124,7 +124,8 @@
     
 </div>
   <div class="w-3/4">
-   
+    {% if posts %}
+    {% for post in posts %}
     <div
       class="overflow-hidden my-4 bg-white  lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-none lg:rounded-xl"
     >
@@ -132,23 +133,23 @@
         <div
           class="h-64 bg-cover lg:h-full"
           style="
-            background-image: url('https://i.pinimg.com/236x/97/80/03/97800332a04d165fb04b6a9658604653.jpg');
+            background-image: url('{{post.image.url}}');
           "
         ></div>
       </div>
 
       <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
         <h2 class="text-md font-semibold text-dark dark:text-dark md:text-md">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, ipsa!
+          {{post.title}}
         </h2>
 
         <p class="mt-4 text-gray dark:text-gray text-sm text-thin">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, repellat neque. Laborum dolore corrupti odio. Aliquam, vel sequi! Id, iste.
+          {{ post.body| safe|truncatewords:20 }}
         </p>
 
         <div class="inline-flex w-full mt-6 sm:w-auto">
           <a
-            href="{% url 'detail' %}"  
+            href="{{post.get_absolute_url}}"  
             class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-blue-500 rounded-none hover:bg-blue-400"
           >
             Learn More
@@ -156,13 +157,11 @@
         </div>
       </div>
     </div>
-    <!--
-    <div class="text-center">
-      <p class="text-gray-500 dark:text-gray-400">
-        No research found in this category
-      </p>
-    </div>
-    -->
+    {% endfor %}
+    {% else %}
+    <p>No posts</p>
+    {% endif %}
+   
     
     
   </div>

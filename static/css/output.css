@@ -670,6 +670,10 @@ video {
   margin-top: 20px;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .block {
   display: block;
 }

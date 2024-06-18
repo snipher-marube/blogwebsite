@@ -13,7 +13,7 @@
 
   <nav
     aria-label="Breadcrumb"
-    class="absolute items-start justify-start bottom-0 z-10 w-full -mb-4"
+    class="absolute items-start justify-start bottom-0 z-10 w-full mb-0 bg-black"
   >
     <ol
       class="breadcrumb flex items-stretch gap-2 px-4 list-none rounded-none shadow-none h-8 bg-secondary bg-opacity-50 text-dark font-Roboto font-semibold text-thin text-sm transition-colors hover:text-gray"
@@ -69,7 +69,8 @@
           <ul
             class="relative w-full mt-4 overflow-hidden p-0 whitespace-no-wrap block [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]"
           >
-            
+          {% if related_posts %}
+            {% for post in related_posts %}
             <li class="flex shadow-none mt-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,9 +98,16 @@
               <a
                 href="#"
                 class="text-start text-sm text-dark text-wrap font-bold hover:underline"
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dicta?</a
+                >
+                {{post.title}}
+                </a
               >
             </li>
+            {% endfor %}
+            {% else %}
+            <p>No related posts</p>
+          
+            {% endif %}
            
           </ul>
         </div>
