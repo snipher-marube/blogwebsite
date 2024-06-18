@@ -93,8 +93,8 @@
   class="bg-gray-100  lg:py-12 lg:flex lg:justify-center"
 >
 <div class="items-center block mt-6">
-    
-    <a href="#" 
+    {% for category in categories %}
+    <a href="{% url 'posts_by_category' category.slug %}" 
         class="flex max-w-[20ch] items-center gap-1 text-dark truncate whitespace-nowrap font-Roboto mt-2 text-thin transition-colors hover:text-gray hover:underline"
     >
     <svg
@@ -119,8 +119,9 @@
             d="M15 19l-7-7 7-7"
           />
         </svg>
-        Django
+        {{ category.name }}
     </a>
+    {% endfor %}
     
 </div>
   <div class="w-3/4">
@@ -159,7 +160,7 @@
     </div>
     {% endfor %}
     {% else %}
-    <p>No posts</p>
+    <p class="mx-10 text-center text-xl">No posts</p>
     {% endif %}
    
     

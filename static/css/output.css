@@ -618,6 +618,11 @@ video {
   margin-bottom: 1rem;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .-mb-4 {
   margin-bottom: -1rem;
 }
