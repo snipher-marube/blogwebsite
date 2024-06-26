@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django_elasticsearch_dsl.search import Search
 
 from .models import Post, Category
+from .forms import SearchForm
 
 # Create your views here.
 def home(request):
@@ -43,4 +45,33 @@ def posts_by_category(request, slug):
         'posts': posts
     }
     return render(request, 'blogapp/post_by_category.html', context)
+
+def post_search(request):
+    form = SearchForm()
+    query = None
+    post_results = []
+    
+    
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            post_search = Search(index='posts').query('multi_match', query=query, fields=['title', 'body'])
+            
+            post_search_results = post_search.execute()
+            
+            post_ids = [hit.meta.id for hit in post_search_results]
+         
+            post_results = Post.objects.filter(id__in=post_ids)
+            
+            
+    
+    
+    context = {
+        'form': form,
+        'query': query,
+        'results': post_results,
+    }
+    
+    return render(request, 'blogapp/search.html', context)
 

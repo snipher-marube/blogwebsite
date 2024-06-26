@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock %}
+{% block content %}
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="-my-8 divide-y-2 divide-gray">
+      {% if query %}
+        <h2 class="font-bold py-5">Search Results for "{{ query }}"</h2>
+        {% if results or research_results or publication_results or impact_results or product_results %}
+        {% for post in results %}
+          <div class="py-8 mt-4 flex flex-wrap md:flex-nowrap">
+            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+              <span class="mt-1 text-gray-500 text-sm">{{ post.publish }}</span>
+            </div>
+            <div class="md:flex-grow">
+              <a href="{{post.get_absolute_url}}">
+                <h2 class="text-2xl font-bold text-secondary title-font mb-2 hover:underline">{{ post.title }}</h2>
+              </a>
+              <p class="leading-relaxed">{{ post.intro }}</p>
+              <a href="{{post.get_absolute_url}}" class="text-secondary inline-flex items-center mt-4">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+        {% else %}
+          <p class="text-center font-bold">No results found for "{{ query }}"</p>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

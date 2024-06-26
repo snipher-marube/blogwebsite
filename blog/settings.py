@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blogapp',
     'ckeditor',
     'ckeditor_uploader',
+    'django_elasticsearch_dsl',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +153,9 @@ CKEDITOR_CONFIGS = {
 CKEDITOR_IMAGE_BACKEND = 'ckeditor_uploader.backends.PillowBackend'
 CKEDITOR_FORCE_JPEG_COMPRESSION = True
 CKEDITOR_IMAGE_QUALITY = 90
+
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'http://127.0.0.1:9200'
+    }
+}
