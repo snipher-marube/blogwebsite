@@ -44,15 +44,40 @@ Before getting started, make sure you have the following installed:
 
 6. Open your web browser and visit `http://127.0.0.1:8000` to see the blog website.
 
+## Elasticsearch Integration
+To integrate Elasticsearch with the blog website, follow these steps:
+
+1. Install Docker and Docker Compose if you haven't already.
+
+2. Start the Elasticsearch container using Docker Compose:
+
+    ```bash
+    docker-compose up -d elasticsearch
+    ```
+
+3. Rebuild the search index by running the following command:
+
+    ```bash
+    python manage.py search_index --rebuild
+    ```
+
+4. Start the development server:
+
+    ```bash
+    python manage.py runserver
+    ```
+
+5. Open your web browser and visit `http://127.0.0.1:8000` to see the blog website with Elasticsearch integration.
+
 ## Usage
 
-- To add articles, log in as an admin and navigate to the admin panel (`http://127.0.0.1:8000/admin`). From there, you can create new articles and assign them to categories.
+After integrating Elasticsearch, you can use the search functionality on the blog website. Simply enter a search query in the search bar and press Enter. The website will display the articles that match the search query.
 
-- To view the blog website, simply visit the homepage (`http://127.0.0.1:8000`) and browse through the articles.
 
-## Contributing
+## Contributingg
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
 
 ## License
 
