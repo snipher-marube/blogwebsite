@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block title %}Home{% endblock %} {% load static %}
+{% load custom_filters %}
 {% block content %}
 
 
@@ -22,17 +23,17 @@
                 src="{{post.image.url}}"
                 class="w-full max-w-full h-[150px] m-auto object-cover"
               />
-
+              <p><em> {{post.publish|date:'F j Y'}} </em></p>
               <a
                 href="{{post.get_absolute_url}}"
                 class="text-start text-xl text-secondary mb-2 text-wrap font-bold hover:underline"
               >
-                {{post.title}}
+                {{post.title|titlecase}}
               </a>
               <p
                 class="text-thin text-sm text-start text-wrap text-gray font-Roboto"
               >
-                {{ post.body| safe|truncatewords:20 }}
+                {{ post.body|safe|truncatewords:20 }}
               </p>
               <a
                 href="{{post.get_absolute_url}}"
